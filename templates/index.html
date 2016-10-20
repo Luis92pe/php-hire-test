@@ -1,304 +1,345 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>JarcDevelop PHP Hire Test</title>
     <link rel="stylesheet" type="text/css" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
-
     <style type="text/css" media="screen">
-    	.color-primary{
-    		background: #76c7c0;
-    		color: white;
-    	}
-    	.color-second{
-    		background: #6ab3ac;
-    		color: white;
-    	}
 
-    	.color-second-gray{
-    		background: #ececec;
-    	}
+    .text-italic{
+        font-family: serif;
+    font-size: 24px;
+    font-style: italic;
+    font-variant: normal;
+    font-weight: 500;
+    line-height: 26.4px;
+    }
 
-    	html, body, legend{
-    		color: #7f8c8c;
-    		background: #f3f3f3;
-    	}
-      	#map { height: 250px; }
+    .color-primary {
+        background: #76c7c0;
+        color: white;
+    }
+    
+    .color-second {
+        background: #6ab3ac;
+        color: white;
+    }
+    
+    .color-second-gray {
+        background: #ececec;
+    }
+    
+    html,
+    body,
+    legend {
+        color: #7f8c8c;
+        background: #f3f3f3;
+    }
+    
+    #map {
+        height: 250px;
+    }
+    
+    .breadcrumb {
+        background: none;
+    }
+    
+    input,
+    textarea {
+        background-color: #ececec !important;
+    }
+    
+    .btn-danger {
+        width: 180px;
+    }
 
-      	.breadcrumb{
-      		background: none;
-      	}
+    .navbar a{
+    	color: white !important;
+    }
 
-      	input, textarea{
-      		background-color: #ececec !important;
-      	}
+    
 
-      	.btn-danger{
-      		width: 180px;
-      	}
+    nav > li > a{
+    	    padding: 6px 9px;
+    }
+
+    .nav>li>a:hover{
+    	background-color: rgba(255, 255, 255, 0); 
+    }
     </style>
-
-   
 </head>
+
 <body>
-	<div class="container-fluid color-primary">
-	    <div class="container">
-	    	<div class="row">
-			  <div class="col-md-2">
-			  	<h4> <strong> MODUS </strong> versus</h4>
-			  </div>
-			  <div class="col-md-1 col-md-offset-1 text-center"><p class="navbar-text">HOME</p></div>
-			  <div class="col-md-1 text-center"><p class="navbar-text">ABOUT</p></div>
-			  <div class="col-md-1 text-center"><p class="navbar-text">SERVICES</p></div>
-			  <div class="col-md-2 text-center"><p class="navbar-text">PORTFOLIO</p></div>
-			  <div class="col-md-1 text-center"><p class="navbar-text">BLOG</p></div>
-			  <div class="col-md-1 text-center"><p class="navbar-text">FEATURES</p></div>
-			  <div class="col-md-1 text-center">
-			  	<button type="button" class="btn btn-success"><p class="navbar-text">SUBMIT</p></button>
-			  </div>
-			  <div class="col-md-1 text-center"><p class="navbar-text"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></p></div>
-			</div>
-	    </div>
-	</div>
-	<div class="container-fluid color-second-gray">
-	    <div class="container">
-	    	<div class="row">
-			  <div class="col-md-6">
-			  	<h3>CONTACT US</h3>
-			  </div>
-			  <div class="col-md-6 text-right">
-			  	<ol class="breadcrumb">
-			  		<li>
-			  			<a href="#">Home</a>
-			  		</li>
-			  		<li>
-			  			<a href="#">Link</a>
-			  		</li>
-			  		<li class="active">Current</li>
-			  	</ol>
-			  </div>
-			</div>
-	    </div>
-	</div>
-	<div class="container">
-		<div class="clearfix">...</div>
-		<div class="row">
-			<div class="col-md-12">
-				<div id="map"></div>
-			</div>
-		</div>
-		<div class="clearfix">...</div>
-		<div class="row">
-			<div class="col-md-12">
-				<p class="well">
-					
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat.
-				</p>
-			</div>
-		</div>
-
-		<div class="row">
-			<div class="col-md-8">
-				<legend>SEND INQUIRY</legend>
-			<!-- Form for users -->
-				<form id="formUsers" class="form-horizontal">
-				  <div class="form-group">
-				    <div class="col-sm-8">
-				      <input type="text" name="name" class="form-control" id="" required="required" >
-				    </div>
-				    <label for="inputEmail3" class="col-sm-4 ">Name</label>
-				  </div>
-				  <div class="form-group">
-				    <div class="col-sm-8">
-				      <input type="email" name="email" class="form-control" id="" required="required" >
-				    </div>
-				    <label for="inputPassword3" class="col-sm-4 ">Email</label>
-				  </div>
-				  <div class="form-group">
-				    <div class="col-sm-8">
-				      <input type="text" name="website" class="form-control" id=""  >
-				    </div>
-				    <label for="inputPassword3" class="col-sm-4 ">Website</label>
-				  </div>
-				  <div class="form-group">
-				    <div class="col-sm-12">
-				      <textarea name="comment" id="" class="form-control" rows="3" required="required"></textarea>
-				    </div>
-				  </div>
-				  <div class="form-group">
-				    <div class="col-sm-12">
-				      <button type="submit" id="btnFormUsers" class="btn btn-danger ">SEND</button>
-				    </div>
-				  </div>
-				</form>
-			</div>
-			<div class="col-md-4">
-				<legend>ADDRESS</legend>
-				<p><span class="glyphicon glyphicon-map-marker"></span>officia deserunt mollit anim id est laborum. </p>
-				<p><span class="glyphicon glyphicon-earphone"></span>111 548 652</p>
-				<p><span class="glyphicon glyphicon-envelope"></span><a href="mailto:joe@example.com?subject=feedback" "email me">modus@versus.com</a> </p>
-			</div>
-		</div>
-	</div>
-	<div class="container-fluid color-primary">
-	    <div class="container">
-	    	<div class="row">
-			  <div class="col-md-4">
-			  	<h4> <strong> MODUS </strong> versus</h4>
-			  	<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			  	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			  	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			  	consequat. </p>
-			  	<br>
-			  	<dl class="dl-horizontal">
-				  <dt>Phone: </dt>
-				  <dd>192 2569 5896</dd>
-
-				  <dt>e-mail: </dt>
-				  <dd>info@modu.versus</dd>
-				</dl>
-			  </div>
-			  <div class="col-md-4">
-			  <div class="row">
-			  	<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-			  		<h3>Company</h3>
-			  		bs3-
-			  	</div>
-			  	<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-			  		<h3>Community</h3>
-			  		bs3-
-			  		
-			  	</div>
-			  </div>
-
-
-			  	<dl class="">
-				  <dt>Phone: </dt>
-				  <dd>192 2569 5896</dd>
-
-				  <dt>e-mail: </dt>
-				  <dd>info@modu.versus</dd>
-				</dl>
-			  </div>
-			  <div class="col-md-4">
-			  	<h3>from the <strong>BLOG</strong> </h3>
-			  	<ul class="media-list">
-				  <li class="media">
-				    <div class="media-left">
-				      <a href="#">
-				        <img class="media-object" style="width: 70px;" src="http://icons.veryicon.com/png/File%20Type/Graphic%20File%20Type/Filetype%20JPEG.png" alt="...">
-				      </a>
-				    </div>
-				    <div class="media-body">
-				      <h4 class="media-heading">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h4>
-				      23 May, 2013
-				    </div>
-				  </li>
-				  <li class="media">
-				    <div class="media-left">
-				      <a href="#">
-				        <img class="media-object" style="width: 70px;" src="http://icons.veryicon.com/png/File%20Type/Graphic%20File%20Type/Filetype%20JPEG.png" alt="...">
-				      </a>
-				    </div>
-				    <div class="media-body">
-				      <h4 class="media-heading">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</h4>
-				      23 May, 2013
-				    </div>
-				  </li>
-				</ul>
-			  </div>
-			  
-			</div>
-	    </div>
-	</div>
-	<div class="container-fluid color-second">
-	    <div class="container">
-	    	<div class="row">
-			  <div class="col-md-6">
-			  	2013modusversus
-			  </div>
-			  <div class="col-md-6 text-right">
-			  	redes
-			  </div>
-			</div>
-	    </div>
-	</div>
-
-	
-	<script src="../bower_components/jquery/dist/jquery.min.js"></script>
-	<script src="../bower_components/bootstrap/dist/js/bootstrap.min.js" ></script>
-	<script src="../bower_components/jquery-validation/dist/jquery.validate.min.js" ></script>
-
-	<script>
-
-	$('#formUsers').validate({
-		rules: {
-			name: {
-				correo: true
-			},
-			email: {
-				tipoDocu: '#inputTipoDocumento2 option:selected',
-			},
-			website: {
-				regex: '^(?:(?:0?[1-9]|1[0-9]|2[0-8])(\/|-)(?:0?[1-9]|1[0-2]))(\/|-)(?:[1-9][0-9][0-9][0-9]|[0-9][1-9][0-9][0-9]|[0-9][0-9][1-9][0-9]|[0-9][0-9][0-9][1-9])$|^(?:(?:31(\/|-)(?:0?[13578]|1[02]))|(?:(?:29|30)(\/|-)(?:0?[1,3-9]|1[0-2])))(\/|-)(?:[1-9][0-9][0-9][0-9]|[0-9][1-9][0-9][0-9]|[0-9][0-9][1-9][0-9]|[0-9][0-9][0-9][1-9])$|^(29(\/|-)0?2)(\/|-)(?:(?:0[48]00|[13579][26]00|[2468][048]00)|(?:[0-9][0-9])?(?:0[48]|[2468][048]|[13579][26]))$',
-			},
-		},
-		messages: {
-			name: {
-				correo:'Por favor, verifique formato del correo.'
-			},
-			email: {
-				tipoDocu:'Por favor, verifique formato del documento.'
-			},
-			website: {
-				regex: 'Por favor, verifique formato de fecha valida.'
-			}
-		}
-	});
-
-
-		$('#btnFormUsers').click(function(event) {
-			event.preventDefault();
-			$.ajax({
-				url: '/',
-				type: 'POST',
-				data: $('#formUsers').serialize(),
-			})
-			.done(function(result) {
-				console.log("success");
-			})
-			.fail(function(result) {
-				console.log("error");
-			})
-			.always(function(result) {
-				console.log("complete");
-			});
-		});
+    <div class="container-fluid color-primary">
+        <div class="container">
+            <nav class="navbar ">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#"> <strong> MODUS </strong> versus</a>
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav nav-pills navbar-right">
+                            <li><a href="#">HOME</a></li>
+                            <li><a href="#">ABOUT</a></li>
+                            <li><a href="#">SERVICES</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="caret"></span> PORTFOLIO</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">Another action</a></li>
+                                    <li><a href="#">Something else here</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="#">Separated link</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">BLOG</a></li>
+                            <li><a href="#">FEATURES</a></li>
+                            <li class="active"><a  href="#">CONTACTS</a></li>
+                            <li><a href="#"><span class="glyphicon glyphicon-search" aria-hidden="true"></a></li>
+                        </ul>
+                        
+                    </div>
+                    <!-- /.navbar-collapse -->
+                </div>
+                <!-- /.container-fluid -->
+            </nav>
+        </div>
+    </div>
+    <div class="container-fluid color-second-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>CONTACT US</h3>
+                </div>
+                <div class="col-md-6 text-right">
+                    <ol class="breadcrumb">
+                        <li>
+                            <a href="#">Home</a>
+                        </li>
+                        <li class="active">Contact us</li>
+                        
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="clearfix">...</div>
+        <div class="row">
+            <div class="col-md-12">
+                <div id="map"></div>
+            </div>
+        </div>
+        <div class="clearfix">...</div>
+        <div class="row">
+            <div class="col-md-12">
+                <p class="well">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                <legend>SEND INQUIRY</legend>
+                <!-- Form for users -->
+                <form id="formUsers" class="form-horizontal">
+                    <div class="form-group">
+                        <div class="col-sm-8">
+                            <input type="text" name="name" class="form-control" id="" required="required">
+                        </div>
+                        <label for="inputEmail3" class="col-sm-4 ">Name</label>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-8">
+                            <input type="email" name="email" class="form-control" id="" required="required">
+                        </div>
+                        <label for="inputPassword3" class="col-sm-4 ">Email</label>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-8">
+                            <input type="text" name="website" class="form-control" id="">
+                        </div>
+                        <label for="inputPassword3" class="col-sm-4 ">Website</label>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <textarea name="comment" id="" class="form-control" rows="3" required="required"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <button type="submit" id="btnFormUsers" class="btn btn-danger ">SEND</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-4">
+                <legend>ADDRESS</legend>
+                <p><span class="glyphicon glyphicon-map-marker"></span>officia deserunt mollit anim id est laborum. </p>
+                <p><span class="glyphicon glyphicon-earphone"></span>111 548 652</p>
+                <p><span class="glyphicon glyphicon-envelope"></span><a href="mailto:joe@example.com?subject=feedback" "email me">modus@versus.com</a> </p>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid color-primary">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h4> <strong> MODUS </strong> versus</h4>
+                    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                    <br>
+                    <dl class="dl-horizontal">
+                        <dt>Phone: </dt>
+                        <dd>192 2569 5896</dd>
+                        <dt>e-mail: </dt>
+                        <dd>info@modu.versus</dd>
+                    </dl>
+                </div>
+                <div class="col-md-4">
+                    <div class="row">
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                            <h4 style="color: #2f2f2f;"><strong>Company</strong></h4> 
+                            <ul>
+  <li>About</li>
+  <li>FQA</li>
+  <li>contact</li>
+  <li>Terms</li>
+  <li>Privacy</li>
+  <li>Testimonials</li>
+</ul>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                            <h4 style="color: #2f2f2f;"><strong>Community</strong></h4> 
+                            <ul>
+  <li>Blog</li>
+  <li>Forum</li>
+  <li>Support</li>
+  <li>News</li>
+</ul>
+                        </div>
+                    </div>
+                   
+                </div>
+                <div class="col-md-4">
+                    <h4><span class="text-italic">from the </span><strong>BLOG</strong> </h4>
+                    <ul class="media-list">
+                        <li class="media">
+                            <div class="media-left">
+                                <a href="#">
+                                    <img class="media-object" style="width: 70px;" src="http://icons.veryicon.com/png/File%20Type/Graphic%20File%20Type/Filetype%20JPEG.png" alt="...">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h4> 23 May, 2013
+                            </div>
+                        </li>
+                        <li class="media">
+                            <div class="media-left">
+                                <a href="#">
+                                    <img class="media-object" style="width: 70px;" src="http://icons.veryicon.com/png/File%20Type/Graphic%20File%20Type/Filetype%20JPEG.png" alt="...">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</h4> 23 May, 2013
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid color-second">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    2013 modusversus
+                </div>
+                <div class="col-md-6 text-right">
+                    <img style="max-width: 20px;" src="http://uspca.com/wp-content/uploads/facebook-logo-png-white-i6.png" class="img-responsive" alt="Image">
+                    <img style="max-width: 20px;" src="http://drugnews.net/images/Icons-Google-plus.png" class="img-responsive" alt="Image">
+                    <img style="max-width: 20px;" src="http://www.iconsdb.com/icons/preview/white/google-plus-xxl.png" class="img-responsive" alt="Image">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../bower_components/less/dist/less.min.js"></script>
+    <script src="../bower_components/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script>
+    $('#formUsers').validate({
+        rules: {
+            name: {
+                required: true
+            },
+            email: {
+                required: true,
+                email: true
+            },
+        },
+        messages: {
+            name: {
+                required: 'Este campo es obligatorio'
+            },
+            email: {
+                required: 'Este campo es obligatorio',
+                email: 'Por favor, Verifique el formato de correo',
+            }
+        }
+    });
 
 
+    $('#btnFormUsers').click(function(event) {
+        event.preventDefault();
 
-	</script>
+        if ($('#formUsers').valid()){
 
-	<script>
-		// AIzaSyBWcfKUaFOB6YsTcSaRhzK_sSxWSOTrAOk
-	</script>
-	<script>
-      var map;
-function initMap() {
-  map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: -34.397, lng: 150.644},
-    zoom: 8
-  });
-}
-      
-
+            $.ajax({
+                url: '/php-hire-test/public/',
+                type: 'POST',
+                data: $('#formUsers').serialize(),
+            })
+            .done(function(result) {
+                console.log("success");
+                console.log(result);
+            })
+            .fail(function(result) {
+                console.log("error");
+            })
+            .always(function(result) {
+                console.log("complete");
+            });
+        }
+    });
     </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWcfKUaFOB6YsTcSaRhzK_sSxWSOTrAOk&callback=initMap"
-        async defer></script>
+    <script>
+    // AIzaSyBWcfKUaFOB6YsTcSaRhzK_sSxWSOTrAOk
+    </script>
+    <script>
+    var map;
+
+    function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+            center: {
+                lat: -34.397,
+                lng: 150.644
+            },
+            zoom: 8
+        });
+    }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWcfKUaFOB6YsTcSaRhzK_sSxWSOTrAOk&callback=initMap" async defer></script>
 </body>
+
 </html>

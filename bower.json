@@ -18,6 +18,8 @@
     "bootstrap": "~3.3.4"
   },
   "dependencies": {
-    "bootstrap": "boostrap#^3.3.7"
+    "bootstrap": "boostrap#^3.3.7",
+    "jquery-validation": "jquery-validate#^1.15.1",
+    "less": "^2.7.1"
   }
 }

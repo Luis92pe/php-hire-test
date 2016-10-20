@@ -24,10 +24,21 @@ $app->view->parserOptions = array(
 $app->view->parserExtensions = array(new \Slim\Views\TwigExtension());
 
 // Define routes
-$app->get('/', function () use ($app) {
+$app->map('/', function () use ($app) {
+
+    if($app->request->isGet()){
+        $app->render('index.html');
+    }elseif ($app->request->isPost()) {
+        $name   = $app->request->post('name');
+        $email  = $app->request->post('email');
+        $website= $app->request->post('website');
+        $comment= $app->request->post('comment');
+
+        echo $name;
+    }
+
     // Render index view
-    $app->render('index.html');
-});
+})->via(['GET', 'POST']);
 
 // Run app
 $app->run();

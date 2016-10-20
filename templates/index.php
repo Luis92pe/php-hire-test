@@ -10,24 +10,24 @@
 
 <body>
 
-<!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Sending email</h4>
-      </div>
-      <div class="modal-body">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor.
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
+	<!-- Modal -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="myModalLabel">Sending email</h4>
+	      </div>
+	      <div class="modal-body">
+	        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	        tempor.
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
 
     <div class="container-fluid color-primary">
         <div class="container">
@@ -71,9 +71,7 @@
                 <!-- /.container-fluid -->
             </nav>
         </div>
-        <div class="row" id="linesheader">
-        	
-        </div>
+        <div class="row" id="linesheader"></div>
     </div>
     <div class="container-fluid color-second-gray">
         <div class="container">
@@ -86,8 +84,7 @@
                         <li>
                             <a href="#">Home</a>
                         </li>
-                        <li class="active">Contact us</li>
-                        
+                        <li class="active">Contact us</li>  
                     </ol>
                 </div>
             </div>
@@ -152,9 +149,7 @@
         </div>
     </div>
     <div class="container-fluid color-primary">
-    <div class="row" id="linesfooter">
-    		
-    	</div>
+    <div class="row" id="linesfooter"></div>
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
@@ -173,22 +168,22 @@
                         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                             <h4 style="color: #2f2f2f;"><strong>Company</strong></h4> 
                             <ul>
-  <li>About</li>
-  <li>FQA</li>
-  <li>contact</li>
-  <li>Terms</li>
-  <li>Privacy</li>
-  <li>Testimonials</li>
-</ul>
+							  <li>About</li>
+							  <li>FQA</li>
+							  <li>contact</li>
+							  <li>Terms</li>
+							  <li>Privacy</li>
+							  <li>Testimonials</li>
+							</ul>
                         </div>
                         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                             <h4 style="color: #2f2f2f;"><strong>Community</strong></h4> 
                             <ul>
-  <li>Blog</li>
-  <li>Forum</li>
-  <li>Support</li>
-  <li>News</li>
-</ul>
+							  <li>Blog</li>
+							  <li>Forum</li>
+							  <li>Support</li>
+							  <li>News</li>
+							</ul>
                         </div>
                     </div>
                    

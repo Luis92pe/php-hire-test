@@ -1,77 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>JarcDevelop PHP Hire Test</title>
     <link rel="stylesheet" type="text/css" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
-    <style type="text/css" media="screen">
-
-    .text-italic{
-        font-family: serif;
-    font-size: 24px;
-    font-style: italic;
-    font-variant: normal;
-    font-weight: 500;
-    line-height: 26.4px;
-    }
-
-    .color-primary {
-        background: #76c7c0;
-        color: white;
-    }
-    
-    .color-second {
-        background: #6ab3ac;
-        color: white;
-    }
-    
-    .color-second-gray {
-        background: #ececec;
-    }
-    
-    html,
-    body,
-    legend {
-        color: #7f8c8c;
-        background: #f3f3f3;
-    }
-    
-    #map {
-        height: 250px;
-    }
-    
-    .breadcrumb {
-        background: none;
-    }
-    
-    input,
-    textarea {
-        background-color: #ececec !important;
-    }
-    
-    .btn-danger {
-        width: 180px;
-    }
-
-    .navbar a{
-    	color: white !important;
-    }
-
-    
-
-    nav > li > a{
-    	    padding: 6px 9px;
-    }
-
-    .nav>li>a:hover{
-    	background-color: rgba(255, 255, 255, 0); 
-    }
-    </style>
+    <link rel="stylesheet/less" type="text/css" href="../resources/less/style.less">
 </head>
 
 <body>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Sending email</h4>
+      </div>
+      <div class="modal-body">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
     <div class="container-fluid color-primary">
         <div class="container">
             <nav class="navbar ">
@@ -114,6 +71,9 @@
                 <!-- /.container-fluid -->
             </nav>
         </div>
+        <div class="row" id="linesheader">
+        	
+        </div>
     </div>
     <div class="container-fluid color-second-gray">
         <div class="container">
@@ -134,7 +94,7 @@
         </div>
     </div>
     <div class="container">
-        <div class="clearfix">...</div>
+        <div class="clearfix"></div>
         <div class="row">
             <div class="col-md-12">
                 <div id="map"></div>
@@ -192,6 +152,9 @@
         </div>
     </div>
     <div class="container-fluid color-primary">
+    <div class="row" id="linesfooter">
+    		
+    	</div>
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
@@ -260,15 +223,16 @@
         </div>
     </div>
     <div class="container-fluid color-second">
+
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
                     2013 modusversus
                 </div>
-                <div class="col-md-6 text-right">
-                    <img style="max-width: 20px;" src="http://uspca.com/wp-content/uploads/facebook-logo-png-white-i6.png" class="img-responsive" alt="Image">
-                    <img style="max-width: 20px;" src="http://drugnews.net/images/Icons-Google-plus.png" class="img-responsive" alt="Image">
-                    <img style="max-width: 20px;" src="http://www.iconsdb.com/icons/preview/white/google-plus-xxl.png" class="img-responsive" alt="Image">
+                <div class="col-md-6 " >
+                    <img  src="../resources/img/twitter.png" class="img-responsive pull-right" alt="Image">
+                    <img  src="../resources/img/googleplus.png" class="img-responsive pull-right" alt="Image">
+                    <img  src="../resources/img/logofacebook.png" class="img-responsive pull-right" alt="Image">
                 </div>
             </div>
         </div>
@@ -277,65 +241,25 @@
     <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="../bower_components/less/dist/less.min.js"></script>
     <script src="../bower_components/jquery-validation/dist/jquery.validate.min.js"></script>
-    <script>
-    $('#formUsers').validate({
-        rules: {
-            name: {
-                required: true
-            },
-            email: {
-                required: true,
-                email: true
-            },
-        },
-        messages: {
-            name: {
-                required: 'Este campo es obligatorio'
-            },
-            email: {
-                required: 'Este campo es obligatorio',
-                email: 'Por favor, Verifique el formato de correo',
-            }
-        }
-    });
-
-
-    $('#btnFormUsers').click(function(event) {
-        event.preventDefault();
-
-        if ($('#formUsers').valid()){
-
-            $.ajax({
-                url: '/php-hire-test/public/',
-                type: 'POST',
-                data: $('#formUsers').serialize(),
-            })
-            .done(function(result) {
-                console.log("success");
-                console.log(result);
-            })
-            .fail(function(result) {
-                console.log("error");
-            })
-            .always(function(result) {
-                console.log("complete");
-            });
-        }
-    });
-    </script>
-    <script>
-    // AIzaSyBWcfKUaFOB6YsTcSaRhzK_sSxWSOTrAOk
-    </script>
+   	<script src="../resources/js/init.js" type="text/javascript"></script>
     <script>
     var map;
 
-    function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-            center: {
-                lat: -34.397,
-                lng: 150.644
-            },
-            zoom: 8
+   	function initMap() {
+        var myLatLng = {lat: 37.4222647, lng: -122.0843172};
+
+        // Create a map object and specify the DOM element for display.
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: myLatLng,
+          scrollwheel: false,
+          zoom: 12
+        });
+
+        // Create a marker and set its position.
+        var marker = new google.maps.Marker({
+          map: map,
+          position: myLatLng,
+          title: 'Google Plex'
         });
     }
     </script>

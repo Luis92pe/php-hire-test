@@ -1,5 +1,11 @@
 <?php
+
+
+
 require '../vendor/autoload.php';
+require '../models/Cliente.php';
+require 'functions.php';
+
 
 // Prepare app
 $app = new \Slim\Slim(array(
@@ -27,14 +33,34 @@ $app->view->parserExtensions = array(new \Slim\Views\TwigExtension());
 $app->map('/', function () use ($app) {
 
     if($app->request->isGet()){
-        $app->render('index.html');
+        $app->render('index.php');
+        
     }elseif ($app->request->isPost()) {
+
         $name   = $app->request->post('name');
         $email  = $app->request->post('email');
         $website= $app->request->post('website');
         $comment= $app->request->post('comment');
 
-        echo $name;
+        if(verificar_email($email)){
+            
+            //Instancia al modelo de cliente
+            $cliente = new Cliente();
+
+            $cliente->setName($name);
+            $cliente->setEmail($email);
+            $cliente->setWebsite($website);
+            $cliente->setcomments($comment);
+            // Guardando en base de datos
+            $cliente->save();
+
+            enviarMensaje();
+
+            echo "Exito";
+            
+        }else{
+            echo "Error";
+        }
     }
 
     // Render index view

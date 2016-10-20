@@ -1,6 +1,100 @@
 @nice-blue: #5B83AD;
 @light-blue: @nice-blue + #111;
+@primary-color: #76c7c0;
+
+
+html,
+    body,
+    legend {
+        color: #7f8c8c;
+        background: #f3f3f3;
+    }
+
+
 
 #header {
   color: @light-blue;
 }
+
+.text-italic{
+    font-family: serif;
+    font-size: 24px;
+    font-style: italic;
+    font-variant: normal;
+    font-weight: 500;
+    line-height: 26.4px;
+}
+
+.color-primary {
+        background: @primary-color;
+        color: white;
+    }
+
+
+    .nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover{
+    	background-color: #62a29e;
+	    border: solid #608278;
+	    border-width: 0px 0px 3px 0px;
+    }
+
+    
+
+    
+    
+    .color-second {
+        background: #6ab3ac;
+        color: white;
+            padding-top: 10px;
+    padding-bottom: 10px;
+    }
+    
+    .color-second-gray {
+        background: #ececec;
+    }
+    
+    
+    
+    #map {
+        height: 250px;
+    }
+    
+    .breadcrumb {
+        background: none;
+    }
+    
+    input,
+    textarea {
+        background-color: #ececec !important;
+    }
+    
+    .btn-danger {
+        width: 180px;
+    }
+
+    .navbar a{
+    	color: white !important;
+    }
+
+    
+
+    nav > li > a{
+    	    padding: 6px 9px;
+    }
+
+    .nav>li>a:hover{
+    	background-color: rgba(255, 255, 255, 0); 
+    }
+
+
+    /*footer lines*/
+
+    #linesfooter{
+    	height: 18px;
+    background-image: url(../resources/img/linesfooter.png);
+    }
+
+
+    #linesheader{
+    	height: 9px;
+    background-image: url(../resources/img/linesheader.png);
+    }

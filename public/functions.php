@@ -4,21 +4,31 @@ require '../vendor/phpmailer/phpmailer/PHPMailerAutoload.php';
 
 
 /**
- * Verifica el formato de email
- * @param  string $email correo electronico del cliente
- * @return [type]        retorna verdadero o falso si el correo cumple con las indicaciones
- */
-function verificar_email($email) 
+Function validation
+*/
+function validate($campo, $atributo) 
 {
-  if(preg_match("/^([a-zA-Z0-9])+([a-zA-Z0-9\._-])*@([a-zA-Z0-9_-])+.([a-zA-Z0-9\._-]+)+$/",$email))
-  {
+  
+    if(in_array("required", $atributo))
+        if(!($campo!='')){
+
+            return false;
+        }
+
+    if(in_array("email", $atributo))
+        if(!(preg_match("/^([a-zA-Z0-9])+([a-zA-Z0-9\._-])*@([a-zA-Z0-9_-])+.([a-zA-Z0-9\._-]+)+$/",$email))){
+            return false;
+        }
+
     return true;
-  }
-  return false;
 }
 
 
 
+
+/**
+    Function for send emails
+*/
 function enviarMensaje(){
 
 	$mail = new PHPMailer;
@@ -26,13 +36,13 @@ function enviarMensaje(){
     $mail->isSMTP();                                      // Set mailer to use SMTP
     $mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
     $mail->SMTPAuth = true;                               // Enable SMTP authentication
-    $mail->Username = 'luis92pe@gmail.com';                 // SMTP username
-    $mail->Password = 'Ug1Aovo*';                           // SMTP password
+    $mail->Username = '[EMAIL]';                 // SMTP username
+    $mail->Password = '[PASSWORD]';                           // SMTP password
     $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
     $mail->Port = 587;                                    // TCP port to connect to
 
-    $mail->setFrom('luis92pe@gmail.com', 'Mailer');
-    $mail->addAddress('luis92pe@gmail.com', 'Joe User');     // Add a recipient
+    $mail->setFrom('[EMAIL]', 'Mailer');
+    $mail->addAddress('[EMAIL]', 'Joe User');     // Add a recipient
     $mail->isHTML(true);                                  // Set email format to HTML
 
     $mail->Subject = 'Here is the subject';

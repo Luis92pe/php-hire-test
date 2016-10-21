@@ -45,3 +45,9 @@ Create a contact form based on the Adobe Photoshop _contact.psd_ file available 
 2. Create a branch with your github username, organizing assets, resources and files as you think it should;
 3. Please, use composer and bower to manage the project dependencies;
 4. When you're done, make a pull request and send e-mail to hello@jarcodallo.com.
+
+## How get started
+
+1. You need create a database with name: 'test';
+2. Create a table: 'clientes' with columns: 'ID, name, email, website, comments'.;
+3. set in the file 'database.php' ubicated in '/models/config/database.php' your user and pass.;

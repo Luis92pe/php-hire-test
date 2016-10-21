@@ -16,11 +16,10 @@
 	    <div class="modal-content">
 	      <div class="modal-header">
 	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-	        <h4 class="modal-title" id="myModalLabel">Sending email</h4>
+	        <h4 class="modal-title" id="myModalLabel"></h4>
 	      </div>
-	      <div class="modal-body">
-	        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-	        tempor.
+	      <div class="modal-body" id="myModalBody">
+	        
 	      </div>
 	      <div class="modal-footer">
 	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -52,11 +51,7 @@
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="caret"></span> PORTFOLIO</a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="#">Action</a></li>
-                                    <li><a href="#">Another action</a></li>
-                                    <li><a href="#">Something else here</a></li>
-                                    <li role="separator" class="divider"></li>
-                                    <li><a href="#">Separated link</a></li>
+                                    
                                 </ul>
                             </li>
                             <li><a href="#">BLOG</a></li>
@@ -79,7 +74,7 @@
                 <div class="col-md-6">
                     <h3>CONTACT US</h3>
                 </div>
-                <div class="col-md-6 text-right">
+                <div class="hidden-xs col-md-6 text-right">
                     <ol class="breadcrumb">
                         <li>
                             <a href="#">Home</a>
@@ -90,6 +85,7 @@
             </div>
         </div>
     </div>
+    <div class="" id="pestana"></div>
     <div class="container">
         <div class="clearfix"></div>
         <div class="row">
@@ -120,7 +116,7 @@
                         <div class="col-sm-8">
                             <input type="email" name="email" class="form-control" id="" required="required">
                         </div>
-                        <label for="inputPassword3" class="col-sm-4 ">Email</label>
+                        <label for="inputPassword3" class="col-sm-4 ">E-mail</label>
                     </div>
                     <div class="form-group">
                         <div class="col-sm-8">
@@ -142,9 +138,9 @@
             </div>
             <div class="col-md-4">
                 <legend>ADDRESS</legend>
-                <p><span class="glyphicon glyphicon-map-marker"></span>officia deserunt mollit anim id est laborum. </p>
-                <p><span class="glyphicon glyphicon-earphone"></span>111 548 652</p>
-                <p><span class="glyphicon glyphicon-envelope"></span><a href="mailto:joe@example.com?subject=feedback" "email me">modus@versus.com</a> </p>
+                <p><span class="glyphicon glyphicon-map-marker text-red"></span> officia deserunt mollit anim id est laborum. </p>
+                <p><span class="glyphicon glyphicon-earphone"></span> 111 548 652</p>
+                <p><span class="glyphicon glyphicon-envelope"></span> <a href="mailto:joe@example.com?subject=feedback" "email me">modus@versus.com</a> </p>
             </div>
         </div>
     </div>
@@ -156,7 +152,7 @@
                     <h4> <strong> MODUS </strong> versus</h4>
                     <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
                     <br>
-                    <dl class="dl-horizontal">
+                    <dl >
                         <dt>Phone: </dt>
                         <dd>192 2569 5896</dd>
                         <dt>e-mail: </dt>
@@ -166,8 +162,8 @@
                 <div class="col-md-4">
                     <div class="row">
                         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                            <h4 style="color: #2f2f2f;"><strong>Company</strong></h4> 
-                            <ul>
+                            <h4 style="color: #3b6360;"><strong>Company</strong></h4> 
+                            <ul class="listFle">
 							  <li>About</li>
 							  <li>FQA</li>
 							  <li>contact</li>
@@ -177,8 +173,8 @@
 							</ul>
                         </div>
                         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                            <h4 style="color: #2f2f2f;"><strong>Community</strong></h4> 
-                            <ul>
+                            <h4 style="color: #3b6360;"><strong>Community</strong></h4> 
+                            <ul class="listFle">
 							  <li>Blog</li>
 							  <li>Forum</li>
 							  <li>Support</li>
@@ -194,22 +190,22 @@
                         <li class="media">
                             <div class="media-left">
                                 <a href="#">
-                                    <img class="media-object" style="width: 70px;" src="http://icons.veryicon.com/png/File%20Type/Graphic%20File%20Type/Filetype%20JPEG.png" alt="...">
+                                    <img class="media-object" style="width: 70px;" src="../resources/img/imgfooter.png" alt="...">
                                 </a>
                             </div>
                             <div class="media-body">
-                                <h4 class="media-heading">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h4> 23 May, 2013
+                                <h5 class="media-heading">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h5> <span style="color: #3b6360">23 May, 2013</span>
                             </div>
                         </li>
                         <li class="media">
                             <div class="media-left">
                                 <a href="#">
-                                    <img class="media-object" style="width: 70px;" src="http://icons.veryicon.com/png/File%20Type/Graphic%20File%20Type/Filetype%20JPEG.png" alt="...">
+                                    <img class="media-object" style="width: 70px;" src="../resources/img/imgfooter.png" alt="...">
                                 </a>
                             </div>
                             <div class="media-body">
-                                <h4 class="media-heading">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</h4> 23 May, 2013
+                                <h5 class="media-heading">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</h5> <span style="color: #3b6360">23 May, 2013</span>
                             </div>
                         </li>
                     </ul>
@@ -221,13 +217,22 @@
 
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-9">
                     2013 modusversus
                 </div>
-                <div class="col-md-6 " >
-                    <img  src="../resources/img/twitter.png" class="img-responsive pull-right" alt="Image">
-                    <img  src="../resources/img/googleplus.png" class="img-responsive pull-right" alt="Image">
-                    <img  src="../resources/img/logofacebook.png" class="img-responsive pull-right" alt="Image">
+                <div class="col-md-3 " >
+                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">  
+                        <img  src="../resources/img/logofacebook.png" class="img-responsive pull-right" alt="Image">
+                    </div>
+                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                        <img  src="../resources/img/googleplus.png" class="img-responsive pull-right" alt="Image">
+                    </div>
+                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                        <img  src="../resources/img/twitter.png" class="img-responsive pull-right" alt="Image">
+                    </div>
+                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                        <img  src="../resources/img/faq.png" class="img-responsive pull-right" alt="Image">
+                    </div>
                 </div>
             </div>
         </div>

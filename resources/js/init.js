@@ -30,15 +30,21 @@ $('#btnFormUsers').click(function(event) {
             })
             .done(function(result) {
                 console.log("success");
+                result = $.parseJSON(result);
 
+                $('#myModalLabel').html(result.tittle);
+                $('#myModalBody').html(result.message);
                 $('#myModal').modal('toggle');
                 console.log(result);
             })
             .fail(function(result) {
-                console.log("error");
-            })
-            .always(function(result) {
-                console.log("complete");
+                console.log("success");
+                result = $.parseJSON(result);
+
+                $('#myModalLabel').html(result.tittle);
+                $('#myModalBody').html(result.message);
+                $('#myModal').modal('toggle');
+                console.log(result);
             });
     }
 });

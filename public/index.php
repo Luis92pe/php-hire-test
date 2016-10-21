@@ -37,30 +37,44 @@ $app->map('/', function () use ($app) {
         
     }elseif ($app->request->isPost()) {
 
-        $name   = $app->request->post('name');
-        $email  = $app->request->post('email');
-        $website= $app->request->post('website');
-        $comment= $app->request->post('comment');
+        try {
+            $name   = $app->request->post('name');
+            $email  = $app->request->post('email');
+            $website= $app->request->post('website');
+            $comment= $app->request->post('comment');
 
-        if(verificar_email($email)){
+
+
+            if(validate($name, ['required'])&&validate($email, ['required', 'email'])&&validate($comment, ['required'])){
+                
+                //Instancia al modelo de cliente
+                $cliente = new Cliente();
+
+                $cliente->setName($name);
+                $cliente->setEmail($email);
+                $cliente->setWebsite($website);
+                $cliente->setcomments($comment);
+                // Guardando en base de datos
+                $cliente->save();
+                enviarMensaje();
+
+                $response = array('message' => 'Gracias por preferirnos', 'cod' => 'S001', 'tittle' => 'Mensaje enviado');
+                echo json_encode($response);
+                
+            }else{
+                
+
+                
+                $response = array('message' => 'Al parecer existe una información corrupta, por favor verifique', 'cod' => 'E002', 'tittle' => 'Error al enviar mensaje');
+                echo json_encode($response);
+
+            }
             
-            //Instancia al modelo de cliente
-            $cliente = new Cliente();
-
-            $cliente->setName($name);
-            $cliente->setEmail($email);
-            $cliente->setWebsite($website);
-            $cliente->setcomments($comment);
-            // Guardando en base de datos
-            $cliente->save();
-
-            enviarMensaje();
-
-            echo "Exito";
-            
-        }else{
-            echo "Error";
+        } catch (Exception $e) {
+            $response = array('message' => 'Ups! Ha ocurrido un error', 'cod' => 'E001', 'tittle' => 'Error al enviar mensaje');
+                echo json_encode($response);
         }
+
     }
 
     // Render index view

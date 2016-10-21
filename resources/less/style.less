@@ -3,6 +3,25 @@
 @primary-color: #76c7c0;
 
 
+// Variables
+@link-color:       #e2534b;
+@link-hover-color: darken(@link-color, 15%);
+
+// Usage
+a {
+  color: @link-color;
+  text-decoration: none;
+
+  &:hover {
+    color: @link-hover-color;
+    text-decoration: underline;
+  }
+}
+
+
+
+
+
 html,
     body,
     legend {
@@ -10,10 +29,31 @@ html,
         background: #f3f3f3;
     }
 
+legend{
+	border-bottom: 0px; 
+}
 
+.form-group label {
+	font-weight: lighter !important; 
+}
+
+.text-red{
+	color: red;
+}
+
+#pestana{
+	height: 36px;
+    background-image: url(../img/pestaña.png);
+    background-repeat: no-repeat;
+    background-position: 45px -2px;
+}
 
 #header {
   color: @light-blue;
+}
+
+.listFle{
+	list-style-image: url(../img/flecha.png);
 }
 
 .text-italic{
